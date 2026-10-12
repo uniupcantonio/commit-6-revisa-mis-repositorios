@@ -1,0 +1,31 @@
+<h1>{{ 'book-stock-form.title' | translate }}</h1>
+<p>{{ 'book-stock-form.subtitle' | translate }}</p>
+
+<form [formGroup]="form" aria-label="Receive books form">
+  <mat-form-field>
+    <mat-label>{{ 'book-stock-form.specialty' | translate }}</mat-label>
+    <mat-select formControlName="specialty" (selectionChange)="onSpecialtyChange($event.value)">
+      @for (bookstore of bookstoresStore.bookstores(); track bookstore.id) {
+        <mat-option [value]="bookstore.specialty">{{
+          'specialty.' + bookstore.specialty | translate
+        }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>{{ 'book-stock-form.book' | translate }}</mat-label>
+    <mat-select formControlName="bookKey">
+      @for (book of catalogStore.books(); track book.key) {
+        <mat-option [value]="book.key">{{ book.title }} ({{ book.authorName }})</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  @if (catalogStore.loading()) {
+    <p>{{ 'book-stock-form.loading-books' | translate }}</p>
+  }
+  @if (catalogStore.error()) {
+    <mat-error>{{ catalogStore.error() }}</mat-error>
+  }
+</form>

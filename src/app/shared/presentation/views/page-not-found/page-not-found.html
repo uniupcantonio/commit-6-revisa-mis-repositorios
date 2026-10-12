@@ -1,0 +1,9 @@
+<h1>{{ 'page-not-found.title' | translate }}</h1>
+<p>{{ 'page-not-found.content' | translate: { invalidPath: '/' + invalidPath } }}</p>
+<button
+  mat-flat-button
+  (click)="navigateToBookstoreOverview()"
+  aria-label="Go to Bookstore Overview"
+>
+  {{ 'page-not-found.go-to-overview' | translate }}
+</button>

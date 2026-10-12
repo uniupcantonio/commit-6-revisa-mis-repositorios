@@ -1,0 +1,14 @@
+<h1>{{ 'bookstore-overview.title' | translate }}</h1>
+<p>{{ 'bookstore-overview.content' | translate }}</p>
+
+<h2>{{ 'store-inventory.title' | translate }}</h2>
+@if (bookstoresStore.error() || inventoryStore.error()) {
+  <mat-error>{{ bookstoresStore.error() ?? inventoryStore.error() }}</mat-error>
+}
+<mat-grid-list cols="2" rowHeight="230px" gutterSize="16px">
+  @for (bookstoreInventory of bookstoreInventories(); track bookstoreInventory.bookstore.id) {
+    <mat-grid-tile>
+      <app-bookstore-summary [bookstoreInventory]="bookstoreInventory" />
+    </mat-grid-tile>
+  }
+</mat-grid-list>

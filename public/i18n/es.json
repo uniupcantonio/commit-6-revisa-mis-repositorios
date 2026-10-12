@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "Plataforma de Inventario de Barnes & Noble",
+    "logo-alt": "Logo de Barnes & Noble"
+  },
+  "option": {
+    "bookstore-overview": "Resumen de Librerías",
+    "receive-books": "Recibir Libros"
+  },
+  "bookstore-overview": {
+    "title": "Resumen de Librerías",
+    "content": "Monitorea la Disponibilidad de Libros en Nuestras Tiendas"
+  },
+  "store-inventory": {
+    "title": "Inventario de Tiendas",
+    "copies": "copias",
+    "empty": "Vacío",
+    "available-titles": "Títulos Disponibles",
+    "replenishment-required": "Reposición Requerida"
+  },
+  "book-stock-form": {
+    "title": "Recibir Libros",
+    "subtitle": "Registra Libros en tu Librería",
+    "specialty": "Especialidad",
+    "book": "Libro",
+    "loading-books": "Cargando libros..."
+  },
+  "specialty": {
+    "fantasy": "Fantasía",
+    "science_fiction": "Ciencia Ficción",
+    "history": "Historia",
+    "mystery": "Misterio",
+    "romance": "Romance",
+    "science": "Ciencia"
+  },
+  "page-not-found": {
+    "title": "Página No Encontrada",
+    "content": "La ruta {{invalidPath}} no fue encontrada.",
+    "go-to-overview": "Ir al Resumen de Librerías"
+  }
+}

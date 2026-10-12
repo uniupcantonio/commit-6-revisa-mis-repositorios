@@ -1,0 +1,41 @@
+{
+  "app": {
+    "title": "Barnes & Noble Inventory Platform",
+    "logo-alt": "Barnes & Noble logo"
+  },
+  "option": {
+    "bookstore-overview": "Bookstore Overview",
+    "receive-books": "Receive Books"
+  },
+  "bookstore-overview": {
+    "title": "Bookstore Overview",
+    "content": "Monitor Book Availability Across Our Stores"
+  },
+  "store-inventory": {
+    "title": "Store Inventory",
+    "copies": "copies",
+    "empty": "Empty",
+    "available-titles": "Available Titles",
+    "replenishment-required": "Replenishment Required"
+  },
+  "book-stock-form": {
+    "title": "Receive Books",
+    "subtitle": "Register Books to Your Bookstore",
+    "specialty": "Specialty",
+    "book": "Book",
+    "loading-books": "Loading books..."
+  },
+  "specialty": {
+    "fantasy": "Fantasy",
+    "science_fiction": "Science Fiction",
+    "history": "History",
+    "mystery": "Mystery",
+    "romance": "Romance",
+    "science": "Science"
+  },
+  "page-not-found": {
+    "title": "Page Not Found",
+    "content": "The path {{invalidPath}} was not found.",
+    "go-to-overview": "Go to Bookstore Overview"
+  }
+}

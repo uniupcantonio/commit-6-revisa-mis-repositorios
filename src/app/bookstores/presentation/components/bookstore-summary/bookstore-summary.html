@@ -1,0 +1,20 @@
+<mat-card appearance="outlined" [attr.aria-label]="bookstoreInventory().bookstore.name">
+  <mat-card-header>
+    <mat-card-title>{{ bookstoreInventory().bookstore.name }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    @for (book of bookstoreInventory().books; track book.bookKey) {
+      <p>{{ book.bookTitle }}: {{ book.copies }} {{ 'store-inventory.copies' | translate }}</p>
+    } @empty {
+      <p>{{ 'store-inventory.empty' | translate }}</p>
+    }
+  </mat-card-content>
+  <mat-card-footer>
+    <p>
+      {{ 'store-inventory.available-titles' | translate }}:
+      {{ bookstoreInventory().availableTitles }}
+      | {{ 'store-inventory.replenishment-required' | translate }}:
+      {{ bookstoreInventory().replenishmentRequired }}
+    </p>
+  </mat-card-footer>
+</mat-card>
